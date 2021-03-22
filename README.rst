@@ -12,8 +12,8 @@ Use the API by instantiating it, and then calling the method through dotted nota
 
 	from disqusapi import DisqusAPI
 	disqus = DisqusAPI(secret_key, public_key)
-	for result in disqus.get('trends.listThreads'):
-	    print result
+	for result in disqus.get('trends.listThreads', method="GET"):
+	    print (result)
 
 Parameters (including the ability to override version, api_secret, and format) are passed as keyword arguments to the resource call::
 
