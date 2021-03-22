@@ -145,7 +145,7 @@ class Resource(object):
 
         if not method:
             raise InterfaceNotDefined(
-                'Interface is not defined, you must pass ``method`` (HTTP Method).')
+                "Interface is not defined, you must pass ``method`` (GET or POST). Ex: disqus.get('trends.listThreads', method='GET')")
 
         method = method.upper()
         if method not in ('GET', 'POST'):
